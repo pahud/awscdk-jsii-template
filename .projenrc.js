@@ -4,11 +4,13 @@ const {
 } = require('projen');
 
 const AWS_CDK_LATEST_RELEASE = '1.44.0';
+const PROJECT_NAME = 'foo-bar';
+const PROJECT_DESCRIPTION = 'A sample JSII construct lib for AWS CDK';
 
 const project = new JsiiProject({
-  name: 'eks-spot-blocks',
+  name: PROJECT_NAME,
   jsiiVersion: Semver.caret('1.5.0'),
-  description: 'eks spot blocks constructs for awscdk',
+  description: PROJECT_DESCRIPTION,
   repository: 'https://github.com/pahud/awscdk-jsii-repo-template.git',
   authorName: 'Pahud Hsieh',
   authorEmail: 'hunhsieh@amazon.com',
@@ -25,7 +27,6 @@ const project = new JsiiProject({
     '@aws-cdk/core': Semver.caret(AWS_CDK_LATEST_RELEASE),
     '@aws-cdk/aws-apigatewayv2': Semver.caret(AWS_CDK_LATEST_RELEASE),
     '@aws-cdk/aws-lambda': Semver.caret(AWS_CDK_LATEST_RELEASE),
-
   },
   python: {
     distName: 'foo-bar',
