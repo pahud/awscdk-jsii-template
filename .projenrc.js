@@ -4,14 +4,14 @@ const {
 } = require('projen');
 
 const AWS_CDK_LATEST_RELEASE = '1.44.0';
-const PROJECT_NAME = 'foo-bar';
+const PROJECT_NAME = 'cdk-serverless-api';
 const PROJECT_DESCRIPTION = 'A sample JSII construct lib for AWS CDK';
 
 const project = new JsiiProject({
   name: PROJECT_NAME,
   jsiiVersion: Semver.caret('1.5.0'),
   description: PROJECT_DESCRIPTION,
-  repository: 'https://github.com/pahud/awscdk-jsii-repo-template.git',
+  repository: 'https://github.com/pahud/awscdk-jsii-template.git',
   authorName: 'Pahud Hsieh',
   authorEmail: 'hunhsieh@amazon.com',
   stability: 'experimental',
@@ -29,8 +29,8 @@ const project = new JsiiProject({
     '@aws-cdk/aws-lambda': Semver.caret(AWS_CDK_LATEST_RELEASE),
   },
   python: {
-    distName: 'foo-bar',
-    module: 'foo_bar'
+    distName: 'cdk-serverless-api',
+    module: 'cdk_serverless_api'
   }
 });
 
