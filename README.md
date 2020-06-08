@@ -6,7 +6,7 @@ This repository template helps you generate JSII construct library for AWS CDK.
 ## Confiuguration
 
 1. customize your `.projenrc.js`
-1. run `npx projen` to generate the `package.json` from `.projenrc.js`
+1. run `npx projen` to generate the `package.json` and `.github/workflows` from `.projenrc.js`
 2. `yarn install` to install all required npm packages
 
 
