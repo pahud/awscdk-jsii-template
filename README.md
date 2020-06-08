@@ -1,4 +1,4 @@
-# Welcome to `awscdk-jsii-repo`
+# Welcome to `awscdk-jsii-template`
 
 This repository template helps you generate JSII construct library for AWS CDK.
 
