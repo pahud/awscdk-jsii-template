@@ -15,16 +15,17 @@ const project = new JsiiProject({
   stability: 'experimental',
   devDependencies: {
     '@aws-cdk/assert': Semver.caret(AWS_CDK_LATEST_RELEASE),
+    '@types/jest': Semver.caret('25.2.3'),
+    '@types/node': Semver.caret('14.0.11'),
     'ts-jest': Semver.caret('25.3.1'),
     'jest': Semver.caret('25.5.0'),
   },
   peerDependencies: {
     constructs: Semver.caret('3.0.3'),
     '@aws-cdk/core': Semver.caret(AWS_CDK_LATEST_RELEASE),
-    '@aws-cdk/aws-ec2': Semver.caret(AWS_CDK_LATEST_RELEASE),
-    '@aws-cdk/aws-eks': Semver.caret(AWS_CDK_LATEST_RELEASE),
-    '@aws-cdk/aws-iam': Semver.caret(AWS_CDK_LATEST_RELEASE),
-    '@aws-cdk/aws-ssm': Semver.caret(AWS_CDK_LATEST_RELEASE),
+    '@aws-cdk/aws-apigatewayv2': Semver.caret(AWS_CDK_LATEST_RELEASE),
+    '@aws-cdk/aws-lambda': Semver.caret(AWS_CDK_LATEST_RELEASE),
+
   },
   python: {
     distName: 'foo-bar',
