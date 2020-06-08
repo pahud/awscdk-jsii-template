@@ -1,0 +1,189 @@
+{
+  "Resources": {
+    "testinghandlerServiceRole2570D6AA": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "testing-stack/testing/handler/ServiceRole/Resource"
+      }
+    },
+    "testinghandlerB9F07DDF": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "ZipFile": "exports.handler = async function(event, context) { return { statusCode: 200, headers: { \"content-type\": \"application/json\"  }, body: JSON.stringify(event) }; };"
+        },
+        "Handler": "index.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "testinghandlerServiceRole2570D6AA",
+            "Arn"
+          ]
+        },
+        "Runtime": "nodejs12.x"
+      },
+      "DependsOn": [
+        "testinghandlerServiceRole2570D6AA"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "testing-stack/testing/handler/Resource"
+      }
+    },
+    "testinghandlertestingstacktestingAPIDefaultRouteCF86C99FPermissionE3BE18A3": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "testinghandlerB9F07DDF",
+            "Arn"
+          ]
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition"
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":",
+              {
+                "Ref": "testingAPIF29BB2F8"
+              },
+              "/*/*"
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "testing-stack/testing/handler/testingstacktestingAPIDefaultRouteCF86C99F-Permission"
+      }
+    },
+    "testingAPIF29BB2F8": {
+      "Type": "AWS::ApiGatewayV2::Api",
+      "Properties": {
+        "Name": "API",
+        "ProtocolType": "HTTP"
+      },
+      "Metadata": {
+        "aws:cdk:path": "testing-stack/testing/API/Resource"
+      }
+    },
+    "testingAPIDefaultRouteDefaultRouteIntegration94D66CFE": {
+      "Type": "AWS::ApiGatewayV2::Integration",
+      "Properties": {
+        "ApiId": {
+          "Ref": "testingAPIF29BB2F8"
+        },
+        "IntegrationType": "AWS_PROXY",
+        "IntegrationUri": {
+          "Fn::GetAtt": [
+            "testinghandlerB9F07DDF",
+            "Arn"
+          ]
+        },
+        "PayloadFormatVersion": "2.0"
+      },
+      "Metadata": {
+        "aws:cdk:path": "testing-stack/testing/API/DefaultRoute/DefaultRoute-Integration/Resource"
+      }
+    },
+    "testingAPIDefaultRouteFDC12649": {
+      "Type": "AWS::ApiGatewayV2::Route",
+      "Properties": {
+        "ApiId": {
+          "Ref": "testingAPIF29BB2F8"
+        },
+        "RouteKey": "$default",
+        "Target": {
+          "Fn::Join": [
+            "",
+            [
+              "integrations/",
+              {
+                "Ref": "testingAPIDefaultRouteDefaultRouteIntegration94D66CFE"
+              }
+            ]
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "testing-stack/testing/API/DefaultRoute/Resource"
+      }
+    },
+    "testingAPIDefaultStageDB43AF9B": {
+      "Type": "AWS::ApiGatewayV2::Stage",
+      "Properties": {
+        "ApiId": {
+          "Ref": "testingAPIF29BB2F8"
+        },
+        "StageName": "$default",
+        "AutoDeploy": true
+      },
+      "Metadata": {
+        "aws:cdk:path": "testing-stack/testing/API/DefaultStage/Resource"
+      }
+    }
+  },
+  "Outputs": {
+    "testingURLC2569872": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            "https://",
+            {
+              "Ref": "testingAPIF29BB2F8"
+            },
+            ".execute-api.",
+            {
+              "Ref": "AWS::Region"
+            },
+            ".",
+            {
+              "Ref": "AWS::URLSuffix"
+            },
+            "/"
+          ]
+        ]
+      }
+    }
+  }
+}

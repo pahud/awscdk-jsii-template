@@ -1,0 +1,186 @@
+{
+  "version": "4.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "testing-stack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "testing-stack.template.json"
+      },
+      "metadata": {
+        "/testing-stack/testing/handler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "testinghandlerServiceRole2570D6AA",
+            "trace": [
+              "new Role (/Users/pahud/github/awscdk-jsii-repo-template/node_modules/@aws-cdk/aws-iam/lib/role.js:41:22)",
+              "new Function (/Users/pahud/github/awscdk-jsii-repo-template/node_modules/@aws-cdk/aws-lambda/lib/function.js:61:35)",
+              "new ServerlessApi (/Users/pahud/github/awscdk-jsii-repo-template/lib/index.js:10:124)",
+              "Object.<anonymous> (/Users/pahud/github/awscdk-jsii-repo-template/test/integ.api.js:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1147:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1167:10)",
+              "Module.load (internal/modules/cjs/loader.js:996:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:896:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/testing-stack/testing/handler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "testinghandlerB9F07DDF",
+            "trace": [
+              "new Function (/Users/pahud/github/awscdk-jsii-repo-template/node_modules/@aws-cdk/aws-lambda/lib/function.js:72:26)",
+              "new ServerlessApi (/Users/pahud/github/awscdk-jsii-repo-template/lib/index.js:10:124)",
+              "Object.<anonymous> (/Users/pahud/github/awscdk-jsii-repo-template/test/integ.api.js:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1147:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1167:10)",
+              "Module.load (internal/modules/cjs/loader.js:996:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:896:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/testing-stack/testing/handler/testingstacktestingAPIDefaultRouteCF86C99F-Permission": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "testinghandlertestingstacktestingAPIDefaultRouteCF86C99FPermissionE3BE18A3",
+            "trace": [
+              "Function.addPermission (/Users/pahud/github/awscdk-jsii-repo-template/node_modules/@aws-cdk/aws-lambda/lib/function-base.js:23:9)",
+              "LambdaProxyIntegration.bind (/Users/pahud/github/awscdk-jsii-repo-template/node_modules/@aws-cdk/aws-apigatewayv2/lib/http/integrations/lambda.js:15:28)",
+              "new HttpRoute (/Users/pahud/github/awscdk-jsii-repo-template/node_modules/@aws-cdk/aws-apigatewayv2/lib/http/route.js:63:42)",
+              "new HttpApi (/Users/pahud/github/awscdk-jsii-repo-template/node_modules/@aws-cdk/aws-apigatewayv2/lib/http/api.js:36:13)",
+              "new ServerlessApi (/Users/pahud/github/awscdk-jsii-repo-template/lib/index.js:15:21)",
+              "Object.<anonymous> (/Users/pahud/github/awscdk-jsii-repo-template/test/integ.api.js:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1147:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1167:10)",
+              "Module.load (internal/modules/cjs/loader.js:996:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:896:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/testing-stack/testing/API/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "testingAPIF29BB2F8",
+            "trace": [
+              "new HttpApi (/Users/pahud/github/awscdk-jsii-repo-template/node_modules/@aws-cdk/aws-apigatewayv2/lib/http/api.js:33:26)",
+              "new ServerlessApi (/Users/pahud/github/awscdk-jsii-repo-template/lib/index.js:15:21)",
+              "Object.<anonymous> (/Users/pahud/github/awscdk-jsii-repo-template/test/integ.api.js:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1147:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1167:10)",
+              "Module.load (internal/modules/cjs/loader.js:996:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:896:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/testing-stack/testing/API/DefaultRoute/DefaultRoute-Integration/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "testingAPIDefaultRouteDefaultRouteIntegration94D66CFE",
+            "trace": [
+              "new HttpIntegration (/Users/pahud/github/awscdk-jsii-repo-template/node_modules/@aws-cdk/aws-apigatewayv2/lib/http/integration.js:50:23)",
+              "new HttpRoute (/Users/pahud/github/awscdk-jsii-repo-template/node_modules/@aws-cdk/aws-apigatewayv2/lib/http/route.js:64:23)",
+              "new HttpApi (/Users/pahud/github/awscdk-jsii-repo-template/node_modules/@aws-cdk/aws-apigatewayv2/lib/http/api.js:36:13)",
+              "new ServerlessApi (/Users/pahud/github/awscdk-jsii-repo-template/lib/index.js:15:21)",
+              "Object.<anonymous> (/Users/pahud/github/awscdk-jsii-repo-template/test/integ.api.js:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1147:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1167:10)",
+              "Module.load (internal/modules/cjs/loader.js:996:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:896:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/testing-stack/testing/API/DefaultRoute/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "testingAPIDefaultRouteFDC12649",
+            "trace": [
+              "new HttpRoute (/Users/pahud/github/awscdk-jsii-repo-template/node_modules/@aws-cdk/aws-apigatewayv2/lib/http/route.js:76:23)",
+              "new HttpApi (/Users/pahud/github/awscdk-jsii-repo-template/node_modules/@aws-cdk/aws-apigatewayv2/lib/http/api.js:36:13)",
+              "new ServerlessApi (/Users/pahud/github/awscdk-jsii-repo-template/lib/index.js:15:21)",
+              "Object.<anonymous> (/Users/pahud/github/awscdk-jsii-repo-template/test/integ.api.js:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1147:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1167:10)",
+              "Module.load (internal/modules/cjs/loader.js:996:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:896:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/testing-stack/testing/API/DefaultStage/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "testingAPIDefaultStageDB43AF9B",
+            "trace": [
+              "new HttpStage (/Users/pahud/github/awscdk-jsii-repo-template/node_modules/@aws-cdk/aws-apigatewayv2/lib/http/stage.js:15:9)",
+              "new HttpApi (/Users/pahud/github/awscdk-jsii-repo-template/node_modules/@aws-cdk/aws-apigatewayv2/lib/http/api.js:43:33)",
+              "new ServerlessApi (/Users/pahud/github/awscdk-jsii-repo-template/lib/index.js:15:21)",
+              "Object.<anonymous> (/Users/pahud/github/awscdk-jsii-repo-template/test/integ.api.js:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1147:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1167:10)",
+              "Module.load (internal/modules/cjs/loader.js:996:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:896:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/testing-stack/testing/URL": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "testingURLC2569872",
+            "trace": [
+              "new ServerlessApi (/Users/pahud/github/awscdk-jsii-repo-template/lib/index.js:20:9)",
+              "Object.<anonymous> (/Users/pahud/github/awscdk-jsii-repo-template/test/integ.api.js:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1147:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1167:10)",
+              "Module.load (internal/modules/cjs/loader.js:996:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:896:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "libraries": {
+      "@aws-cdk/core": "1.44.0",
+      "@aws-cdk/cx-api": "1.44.0",
+      "@aws-cdk/cloud-assembly-schema": "1.44.0",
+      "@aws-cdk/cdk-assets-schema": "1.44.0",
+      "@aws-cdk/aws-apigatewayv2": "1.44.0",
+      "@aws-cdk/aws-iam": "1.44.0",
+      "@aws-cdk/region-info": "1.44.0",
+      "@aws-cdk/aws-lambda": "1.44.0",
+      "@aws-cdk/aws-cloudwatch": "1.44.0",
+      "@aws-cdk/aws-ec2": "1.44.0",
+      "@aws-cdk/aws-ssm": "1.44.0",
+      "@aws-cdk/aws-logs": "1.44.0",
+      "@aws-cdk/aws-s3": "1.44.0",
+      "@aws-cdk/aws-events": "1.44.0",
+      "@aws-cdk/aws-kms": "1.44.0",
+      "@aws-cdk/aws-sqs": "1.44.0",
+      "@aws-cdk/aws-s3-assets": "1.44.0",
+      "@aws-cdk/assets": "1.44.0",
+      "jsii-runtime": "node.js/v13.10.1"
+    }
+  }
+}
