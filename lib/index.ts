@@ -13,9 +13,19 @@ export class ServerlessApi extends cdk.Construct {
   constructor(scope: cdk.Construct, id: string, props?: ServerlessApiProps) {
     super(scope, id);
     this.handler = props?.handler ?? new lambda.Function(this, 'handler', {
-      runtime: lambda.Runtime.NODEJS_12_X,
+      runtime: lambda.Runtime.PYTHON_3_7,
       handler: 'index.handler',
-      code: new lambda.InlineCode('exports.handler = async function(event, context) { return { statusCode: 200, headers: { "content-type": "application/json"  }, body: JSON.stringify(event) }; };'),
+      code: new lambda.InlineCode(`
+import json
+def handler(event, context):
+      return {
+        'statusCode': '200',
+        'headers': {
+          'Content-Type': 'application/json',
+        },
+        'body': json.dumps(event)
+      }
+`),
     });
 
     const api = new apigatewayv2.HttpApi(this, 'API', {
