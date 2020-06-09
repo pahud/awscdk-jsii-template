@@ -28,6 +28,12 @@ const project = new JsiiProject({
     '@aws-cdk/aws-apigatewayv2': Semver.caret(AWS_CDK_LATEST_RELEASE),
     '@aws-cdk/aws-lambda': Semver.caret(AWS_CDK_LATEST_RELEASE),
   },
+  dependencies: {
+    constructs: Semver.caret('3.0.3'),
+    '@aws-cdk/core': Semver.caret(AWS_CDK_LATEST_RELEASE),
+    '@aws-cdk/aws-apigatewayv2': Semver.caret(AWS_CDK_LATEST_RELEASE),
+    '@aws-cdk/aws-lambda': Semver.caret(AWS_CDK_LATEST_RELEASE),
+  },
   python: {
     distName: 'cdk-serverless-api',
     module: 'cdk_serverless_api'
