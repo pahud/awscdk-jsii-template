@@ -3,7 +3,7 @@ const {
   Semver
 } = require('projen');
 
-const AWS_CDK_LATEST_RELEASE = '1.44.0';
+const AWS_CDK_LATEST_RELEASE = '1.45.0';
 const PROJECT_NAME = 'cdk-serverless-api';
 const PROJECT_DESCRIPTION = 'A sample JSII construct lib for AWS CDK';
 
