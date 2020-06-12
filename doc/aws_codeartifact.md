@@ -33,7 +33,7 @@ project.releaseWorkflow.addJobs({
 
 Get the `CODEARTIFACT_NPM_TOKEN` by **aws codeartifact get-authorization-token**:
 ```bash
-aws codeartifact get-authorization-token --domain pahud --domain-owner 112233445566 --query authorizationToken --output text
+aws codeartifact get-authorization-token --domain {domain} --domain-owner 112233445566 --query authorizationToken --output text
 ```
 
 ## CODEARTIFACT_NPM_REGISTRY
