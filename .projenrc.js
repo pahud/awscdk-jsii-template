@@ -40,13 +40,14 @@ project.addFields({
 });
 
 project.gitignore.exclude(
-  'cdk.context.json'
+  'cdk.context.json',
+  'cdk.out',
 );
 
 
 project.npmignore.exclude(
-  'cdk.out',
   'cdk.context.json',
+  'cdk.out',  
   'coverage',
 );
 
