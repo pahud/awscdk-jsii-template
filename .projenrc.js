@@ -39,4 +39,16 @@ project.addFields({
   ]
 });
 
+project.gitignore.exclude(
+  'cdk.context.json'
+);
+
+
+project.npmignore.exclude(
+  'cdk.out',
+  'cdk.context.json',
+  'coverage',
+);
+
+
 project.synth();
