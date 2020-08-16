@@ -4,6 +4,13 @@ This repository template helps you generate JSII construct library for AWS CDK a
 the process to develop, build, test and eventually publish your AWS CDK construct lib to `npmjs` and `pipy`.
 
 
+## Directories in this template
+
+- **src** - all the typescript source code under this directory
+- **test** - unit tests and integ tests
+- **lib** - will be auto-generated from the `src` when you run `yarn build`
+
+
 ## Confiuguration
 
 1. customize your `.projenrc.js`
