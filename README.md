@@ -14,9 +14,11 @@ the process to develop, build, test and eventually publish your AWS CDK construc
 ## Confiuguration
 
 1. customize your `.projenrc.js`
-1. run `npx projen` to project generate assets including the `package.json` and `.github/workflows` from `.projenrc.js`
+1. run `npx projen` to project generate assets including the `LICENSE`, `version.json`, `package.json` and `.github/workflows` from `.projenrc.js`.
+At this moment, your initial `version` should be `0.0.0`.
 2. `yarn install` to install all required npm packages
 
+You can run the commands above like this:
 ```sh
 $ npx projen && yarn install
 ```
@@ -48,16 +50,17 @@ If `yarn test` is doing great with no error. Run `yarn build` to generate the `l
 ## commit your changes to local repository
 
 ```sh
-$ git commit -am "commit message"
+$ git commit -am "chore(release): initial commit for the first release" 
 ```
 
 
 ## bump the version and push to your repository
 
+bump to a specific release version number, i.e. `v0.1.0`
 ```sh
 $ yarn bump --release-as v0.1.0
 ```
-or simply bump the minor version from `version.json`
+or simply bump the minor version from `version.json`, in which case the version will bump from `0.0.0` to `0.0.1`
 
 ```sh
 $ yarn bump
