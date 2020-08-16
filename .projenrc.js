@@ -17,6 +17,7 @@ const project = new JsiiProject({
   authorName: 'Pahud Hsieh',
   authorEmail: 'pahudnet@gmail.com',
   stability: 'experimental',
+  autoReleaseSchedule: 'never',
   devDependencies: {
     constructs: Semver.caret(CONSTRUCTS_VERSION),
     '@aws-cdk/assert': Semver.pinned(AWS_CDK_LATEST_RELEASE),
