@@ -1,0 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const index_1 = require("../lib/index");
+const core_1 = require("@aws-cdk/core");
+const mockApp = new core_1.App();
+const stack = new core_1.Stack(mockApp, 'testing-stack');
+new index_1.ServerlessApi(stack, 'testing');
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW50ZWcuYXBpLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiaW50ZWcuYXBpLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsd0NBQTZDO0FBQzdDLHdDQUEyQztBQUUzQyxNQUFNLE9BQU8sR0FBRyxJQUFJLFVBQUcsRUFBRSxDQUFDO0FBQzFCLE1BQU0sS0FBSyxHQUFHLElBQUksWUFBSyxDQUFDLE9BQU8sRUFBRSxlQUFlLENBQUMsQ0FBQztBQUVsRCxJQUFJLHFCQUFhLENBQUMsS0FBSyxFQUFFLFNBQVMsQ0FBQyxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgU2VydmVybGVzc0FwaSB9IGZyb20gJy4uL2xpYi9pbmRleCc7XG5pbXBvcnQgeyBBcHAsIFN0YWNrIH0gZnJvbSAnQGF3cy1jZGsvY29yZSc7XG5cbmNvbnN0IG1vY2tBcHAgPSBuZXcgQXBwKCk7XG5jb25zdCBzdGFjayA9IG5ldyBTdGFjayhtb2NrQXBwLCAndGVzdGluZy1zdGFjaycpO1xuXG5uZXcgU2VydmVybGVzc0FwaShzdGFjaywgJ3Rlc3RpbmcnKTtcblxuXG5cblxuXG4iXX0=

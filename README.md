@@ -1,20 +1,25 @@
 # Welcome to `awscdk-jsii-template`
 
-This repository template helps you generate JSII construct library for AWS CDK.
+This repository template helps you generate JSII construct library for AWS CDK and aims to simplify
+the process to develop, build, test and eventually publish your AWS CDK construct lib to `npmjs` and `pipy`.
 
 
 ## Confiuguration
 
 1. customize your `.projenrc.js`
-1. run `npx projen` to generate the `package.json` and `.github/workflows` from `.projenrc.js`
+1. run `npx projen` to project generate assets including the `package.json` and `.github/workflows` from `.projenrc.js`
 2. `yarn install` to install all required npm packages
+
+```sh
+$ npx projen && yarn install
+```
 
 
 ## Integration tests
 
 1. run `yarn watch` in a seperate terminal
 2. edit `test/integ.api.ts`
-3. `cdk diff` and `cdk deploy`
+3. Run `cdk diff` and `cdk deploy` to ensure it deploys with no error in your real aws environment.
 
 ```bash
 cdk --app 'test/integ.api.js' diff
@@ -29,21 +34,36 @@ cdk --app 'test/integ.api.js' deploy
 2. run `yarn test`
 
 
-## Usage
+## run `yarn build` to generate the `lib` directory
 
-| Command          | Description                                       |
-|------------------|---------------------------------------------------|
-|`yarn install`    |Install dependencies                               |
-|`yarn compile`    |Compile to JavaScript                              |
-|`yarn watch`      |Watch for changes and compile                      |
-|`yarn test`       |Run tests                                          |
-|`yarn run package`|Create `dist` with bundles for all languages       |
-|`yarn build`      |Compile + test + package                           |
-|`yarn bump`       |Bump a new version (based on conventional commits) |
-|`yarn compat`     |Run API compatibility check against latest         |
+If `yarn test` is doing great with no error. Run `yarn build` to generate the `lib` and other assets.
 
-## GitHub Workflows
+## commit your changes to local repository
 
-- [Build](./.github/workflows/build.yml): when a PR is created/updated, runs `yarn build`
-- [Release](./.github/workflows/release.yml): `yarn build` and publish to all package managers for every commit to `master` (ignore if current version is already released).
+```sh
+$ git commit -am "commit message"
+```
+
+
+## bump the version and push to your repository
+
+```sh
+# bump the minor version in the version.json
+$ yarn bump
+or
+$ yarn bump yarn bump --release-as YOUR_VERSION_STRING
+```
+and `git push` with the tags
+
+```sh
+$ git push --follow-tags origin master
+```
+
+If you push successfully, go to your the `Actions` in your github repository, make sure the `build` and `release` workflows run successfully.
+
+
+## Projen
+
+This template leverages the [eladb/projen](https://github.com/eladb/projen) by [Elad Ben-Israel](https://github.com/eladb). Check it out for more detials and usages for the `projen` command.
+
 
