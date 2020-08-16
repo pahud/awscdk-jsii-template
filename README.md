@@ -55,11 +55,14 @@ $ git commit -am "commit message"
 ## bump the version and push to your repository
 
 ```sh
-# bump the minor version in the version.json
-$ yarn bump
-or
-$ yarn bump yarn bump --release-as YOUR_VERSION_STRING
+$ yarn bump --release-as v0.1.0
 ```
+or simply bump the minor version from `version.json`
+
+```sh
+$ yarn bump
+```
+
 and `git push` with the tags
 
 ```sh
