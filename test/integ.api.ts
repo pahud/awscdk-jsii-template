@@ -1,4 +1,4 @@
-import { ServerlessApi } from '../lib/index';
+import { ServerlessApi } from '../src/index';
 import { App, Stack } from '@aws-cdk/core';
 
 const mockApp = new App();
