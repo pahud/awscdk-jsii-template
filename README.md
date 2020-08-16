@@ -50,7 +50,7 @@ If `yarn test` is doing great with no error. Run `yarn build` to generate the `l
 ## commit your changes to local repository
 
 ```sh
-$ git commit -am "chore(core): initial release" 
+$ git commit -am "chore(release): initial commit for the first release" 
 ```
 
 
