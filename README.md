@@ -82,6 +82,7 @@ This template leverages the [eladb/projen](https://github.com/eladb/projen) by [
 ## Projects using this Template
 - [aws-fargate-fast-autoscaler](https://github.com/aws-samples/aws-fargate-fast-autoscaler)
 - [cdk-eks-spotblocks](https://github.com/pahud/cdk-eks-spotblocks)
+- [cdk-elasticsearch-monitor](https://github.com/jialechan/cdk-elasticache-monitor)
 - [cdk-fargate-express](https://github.com/pahud/cdk-fargate-express)
 - [cdk-gitlab-runner](https://github.com/guan840912/cdk-gitlab-runner)
 - [cdk-serverless-lamp](https://github.com/aws-samples/cdk-serverless-lamp)
