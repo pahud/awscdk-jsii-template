@@ -42,7 +42,6 @@ jspm_packages/
 tsconfig.json
 cdk.out
 cdk.context.json
-docker-compose.yml
 images
 yarn-error.log
 !/package.json
@@ -55,6 +54,7 @@ yarn-error.log
 !/.github/workflows/release.yml
 !/.mergify.yml
 !/.github/dependabot.yml
+!/.github/workflows/projenupgrade.yml
 !/src
 !/.eslintrc.json
 !/tsconfig.jest.json
