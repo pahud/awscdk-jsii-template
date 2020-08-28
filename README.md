@@ -85,7 +85,6 @@ This template leverages the [eladb/projen](https://github.com/eladb/projen) by [
 - [aws-fargate-fast-autoscaler](https://github.com/aws-samples/aws-fargate-fast-autoscaler)
 - [eks-spot-blocks](https://github.com/pahud/eks-spot-blocks)
 - [cdk-fargate-express](https://github.com/pahud/cdk-fargate-express)
-- [aws-cdk-serverless-sample](https://github.com/pahud/aws-cdk-serverless-sample)
 - [cdk-gitlab-runner](https://github.com/guan840912/cdk-gitlab-runner)
 
 
