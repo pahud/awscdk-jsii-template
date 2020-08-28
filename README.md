@@ -80,11 +80,14 @@ If you push successfully, go to your the `Actions` in your github repository, ma
 This template leverages the [eladb/projen](https://github.com/eladb/projen) by [Elad Ben-Israel](https://github.com/eladb). Check it out for more detials and usages for the `projen` command.
 
 ## Projects using this Template
-- [cdk-serverless-lamp](https://github.com/aws-samples/cdk-serverless-lamp)
-- [cdk-spot-one](https://github.com/pahud/cdk-spot-one)
 - [aws-fargate-fast-autoscaler](https://github.com/aws-samples/aws-fargate-fast-autoscaler)
-- [eks-spot-blocks](https://github.com/pahud/eks-spot-blocks)
 - [cdk-fargate-express](https://github.com/pahud/cdk-fargate-express)
 - [cdk-gitlab-runner](https://github.com/guan840912/cdk-gitlab-runner)
+- [cdk-serverless-lamp](https://github.com/aws-samples/cdk-serverless-lamp)
+- [cdk-spot-one](https://github.com/pahud/cdk-spot-one)
+- [cdk-eks-spotblocks](https://github.com/pahud/cdk-eks-spotblocks)
+
+
+
 
 
