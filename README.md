@@ -23,6 +23,11 @@ You can run the commands above like this:
 $ npx projen && yarn install
 ```
 
+>From now on, we will refer to this command as pj. Every time you modify .projenrc.js, just run pj.
+
+>Put this in your shell profile: alias pj='npx projen && yarn install'
+
+
 
 ## Integration tests
 
@@ -56,7 +61,7 @@ $ git commit -am "chore(release): initial commit for the first release"
 
 ## bump the version and push to your repository
 
-bump to a specific release version number, i.e. `v0.1.0`
+To bump a specific release version number, i.e. `v0.1.0`
 ```sh
 $ yarn bump --release-as v0.1.0
 ```
@@ -70,6 +75,13 @@ and `git push` with the tags
 
 ```sh
 $ git push --follow-tags origin master
+```
+
+Or just:
+
+```sh
+# this equals to `arn bump && git push --follow-tags origin master`, see package.json
+$ yarn release
 ```
 
 If you push successfully, go to your the `Actions` in your github repository, make sure the `build` and `release` workflows run successfully.
