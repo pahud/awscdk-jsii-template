@@ -2,7 +2,7 @@ const {
   ConstructLibraryAws,
 } = require('projen');
 
-const AWS_CDK_LATEST_RELEASE = '1.61.0';
+const AWS_CDK_LATEST_RELEASE = '1.62.0';
 const PROJECT_NAME = 'cdk-serverless-api';
 const PROJECT_DESCRIPTION = 'A sample JSII construct lib for AWS CDK';
 
