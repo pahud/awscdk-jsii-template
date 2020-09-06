@@ -23,6 +23,11 @@ You can run the commands above like this:
 $ npx projen && yarn install
 ```
 
+>From now on, we will refer to this command as pj. Every time you modify .projenrc.js, just run pj.
+
+>Put this in your shell profile: alias pj='npx projen && yarn install'
+
+
 
 ## Integration tests
 
@@ -56,7 +61,7 @@ $ git commit -am "chore(release): initial commit for the first release"
 
 ## bump the version and push to your repository
 
-bump to a specific release version number, i.e. `v0.1.0`
+To bump a specific release version number, i.e. `v0.1.0`
 ```sh
 $ yarn bump --release-as v0.1.0
 ```
@@ -72,6 +77,13 @@ and `git push` with the tags
 $ git push --follow-tags origin master
 ```
 
+Or just:
+
+```sh
+# this equals to `arn bump && git push --follow-tags origin master`, see package.json
+$ yarn release
+```
+
 If you push successfully, go to your the `Actions` in your github repository, make sure the `build` and `release` workflows run successfully.
 
 
@@ -80,12 +92,16 @@ If you push successfully, go to your the `Actions` in your github repository, ma
 This template leverages the [eladb/projen](https://github.com/eladb/projen) by [Elad Ben-Israel](https://github.com/eladb). Check it out for more detials and usages for the `projen` command.
 
 ## Projects using this Template
+- [aws-fargate-fast-autoscaler](https://github.com/aws-samples/aws-fargate-fast-autoscaler)
+- [cdk-eks-spotblocks](https://github.com/pahud/cdk-eks-spotblocks)
+- [cdk-elasticsearch-monitor](https://github.com/jialechan/cdk-elasticache-monitor)
+- [cdk-fargate-express](https://github.com/pahud/cdk-fargate-express)
+- [cdk-gitlab-runner](https://github.com/guan840912/cdk-gitlab-runner)
 - [cdk-serverless-lamp](https://github.com/aws-samples/cdk-serverless-lamp)
 - [cdk-spot-one](https://github.com/pahud/cdk-spot-one)
-- [aws-fargate-fast-autoscaler](https://github.com/aws-samples/aws-fargate-fast-autoscaler)
-- [eks-spot-blocks](https://github.com/pahud/eks-spot-blocks)
-- [cdk-fargate-express](https://github.com/pahud/cdk-fargate-express)
-- [aws-cdk-serverless-sample](https://github.com/pahud/aws-cdk-serverless-sample)
-- [cdk-gitlab-runner](https://github.com/guan840912/cdk-gitlab-runner)
+
+
+
+
 
 
