@@ -1,3 +1,6 @@
+[![awscdk-jsii-template](https://img.shields.io/badge/built%20with-awscdk--jsii--template-blue)](https://github.com/pahud/awscdk-jsii-template)
+
+
 # Welcome to `awscdk-jsii-template`
 
 This repository template helps you generate JSII construct library for AWS CDK and aims to simplify
