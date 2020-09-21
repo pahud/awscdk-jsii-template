@@ -101,6 +101,7 @@ This template leverages the [eladb/projen](https://github.com/eladb/projen) by [
 - [cdk-fargate-express](https://github.com/pahud/cdk-fargate-express)
 - [cdk-gitlab-runner](https://github.com/guan840912/cdk-gitlab-runner)
 - [cdk-serverless-lamp](https://github.com/aws-samples/cdk-serverless-lamp)
+- [cdk-soca](https://github.com/pahud/cdk-soca)
 - [cdk-spot-one](https://github.com/pahud/cdk-spot-one)
 
 
